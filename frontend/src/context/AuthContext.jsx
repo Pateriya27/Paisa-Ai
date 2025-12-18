@@ -26,7 +26,7 @@ export function AuthProvider({ children }) {
       setToken(newToken)
       setUser({ email: userEmail, name, role })
       localStorage.setItem('token', newToken)
-      return { success: true }
+      return { success: true, role }
     } catch (error) {
       return { success: false, error: error.response?.data?.message || 'Login failed' }
     }

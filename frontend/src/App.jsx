@@ -8,6 +8,7 @@ import Transactions from './pages/Transactions'
 import Budgets from './pages/Budgets'
 import AIRecommendations from './pages/AIRecommendations'
 import Layout from './components/Layout'
+import AdminDashboard from './pages/AdminDashboard'
 
 function PrivateRoute({ children }) {
   const { token } = useAuth()
@@ -19,6 +20,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/admin" element={<AdminDashboard />} />
       <Route
         path="/"
         element={
